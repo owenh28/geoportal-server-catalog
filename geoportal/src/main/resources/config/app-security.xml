@@ -23,7 +23,7 @@
   <!-- <beans:import resource="${gpt_authentication:authentication-simple.xml}"/> -->
   <beans:import resource="${gpt_authentication:authentication-simple.xml}"/>
   
-  <beans:import resource="app-oauth.xml"/>
+<!--  <beans:import resource="app-oauth.xml"/>-->
   <security:http realm="Geoportal" pattern="/**" authentication-manager-ref="authenticationManager">
     <security:headers>
        <security:frame-options policy="SAMEORIGIN"/>
@@ -32,7 +32,7 @@
     </security:headers>
     <security:csrf disabled="true"/>
     <security:http-basic />
-    <security:custom-filter ref="oauthResourceFilter" before="PRE_AUTH_FILTER" />
+<!--    <security:custom-filter ref="oauthResourceFilter" before="PRE_AUTH_FILTER" />-->
     <security:intercept-url pattern="/" access="permitAll" />
     
     <!-- /stac - the stac catalog -->
